@@ -1,0 +1,23 @@
+{
+  "name": "rollup-prerender-plugin",
+  "version": "0.0.1",
+  "description": "A small Rollup plugin to prerender output.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nainemom/rollup-prerender-plugin.git"
+  },
+  "author": "Amir Momenian <nainemom@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nainemom/rollup-prerender-plugin/issues"
+  },
+  "homepage": "https://github.com/nainemom/rollup-prerender-plugin#readme",
+  "dependencies": {
+    "@prerenderer/prerenderer": "^0.7.2",
+    "@prerenderer/renderer-puppeteer": "^0.2.0"
+  }
+}
