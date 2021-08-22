@@ -1,6 +1,6 @@
 {
   "name": "rollup-prerender-plugin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A small Rollup plugin to prerender output.",
   "main": "dist/index.js",
   "scripts": {
