@@ -1,9 +1,9 @@
-import { join } from 'path';
-import { mkdirSync, writeFileSync } from 'fs';
-import Prerenderer from '@prerenderer/prerenderer';
-import PuppeteerRenderer from '@prerenderer/renderer-puppeteer';
+const { join } = ('path');
+const { mkdirSync, writeFileSync } = ('fs');
+const Prerenderer = ('@prerenderer/prerenderer');
+const PuppeteerRenderer = ('@prerenderer/renderer-puppeteer');
 
-export default (userConfig = {}) => {
+module.export = (userConfig = {}) => {
 	const config = {
 		routes: ['/'],
 		hook: 'closeBundle',
