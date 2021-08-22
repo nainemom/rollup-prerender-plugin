@@ -15,7 +15,7 @@ module.exports = (userConfig = {}) => {
 		async generateBundle(options) {
 			config.outputDir = options.dir;
 		},
-		async [hook]() {
+		async [config.hook]() {
 			const prerenderer = new Prerenderer({
 				staticDir: config.outputDir,
 				renderer: new PuppeteerRenderer(config.puppeteer),
