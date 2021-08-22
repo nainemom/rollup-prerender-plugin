@@ -2,9 +2,10 @@
   "name": "rollup-prerender-plugin",
   "version": "0.0.4",
   "description": "A small Rollup plugin to prerender output.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "@prerenderer/prerenderer": "^0.7.2",
     "@prerenderer/renderer-puppeteer": "^0.2.0"
+  },
+  "devDependencies": {
+    "rollup": "^2.56.2"
   }
 }
