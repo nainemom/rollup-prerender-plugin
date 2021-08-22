@@ -19,7 +19,9 @@
   "homepage": "https://github.com/nainemom/rollup-prerender-plugin#readme",
   "dependencies": {
     "@prerenderer/prerenderer": "^0.7.2",
-    "@prerenderer/renderer-puppeteer": "^0.2.0"
+    "@prerenderer/renderer-puppeteer": "^0.2.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "rollup": "^2.56.2"

@@ -6,6 +6,6 @@ export default {
   output: {
     file: pkg.main,
     format: 'cjs',
-    interop: false
+		exports: 'default'
   }
 }
