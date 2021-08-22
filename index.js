@@ -3,7 +3,7 @@ const { mkdirSync, writeFileSync } = ('fs');
 const Prerenderer = ('@prerenderer/prerenderer');
 const PuppeteerRenderer = ('@prerenderer/renderer-puppeteer');
 
-module.export = (userConfig = {}) => {
+module.exports = (userConfig = {}) => {
 	const config = {
 		routes: ['/'],
 		hook: 'closeBundle',
