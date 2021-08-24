@@ -46,6 +46,14 @@ Default: `'closeBundle'`
 
 Rollup [build hook](https://github.com/rollup/rollup/blob/master/docs/05-plugin-development.md#build-hooks) to run the action.
 
+### `removeScripts`
+
+Type: `Boolean`
+
+Default: `false`
+
+Remove all scripts tag from rendered html.
+
 ### `puppeteer`
 
 Type: `Object`
