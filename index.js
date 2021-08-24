@@ -6,7 +6,8 @@ import PuppeteerRenderer from '@prerenderer/renderer-puppeteer';
 export default (userConfig = {}) => {
 	const config = {
 		routes: ['/'],
-		hook: 'closeBundle',
+		hook: 'writeBundle',
+		removeScripts: false,
 		puppeteer: {},
 		...userConfig,
 	};
@@ -26,7 +27,11 @@ export default (userConfig = {}) => {
 				const routeOutputDir = join(config.outputDir, renderedRoute.route);
 				mkdirSync(routeOutputDir, { recursive: true });
 				const outputFile = join(routeOutputDir, './index.html');
-				writeFileSync(outputFile, renderedRoute.html.trim());
+				let html = renderedRoute.html.trim();
+				if (config.removeScripts) {
+					html = html.replace(/\<script.+\<\/script>/, '');
+				}
+				writeFileSync(outputFile, html);
 			}
 			prerenderer.destroy();
 			return null;
