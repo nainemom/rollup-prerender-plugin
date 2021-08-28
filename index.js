@@ -29,7 +29,9 @@ export default (userConfig = {}) => {
 				const outputFile = join(routeOutputDir, './index.html');
 				let html = renderedRoute.html.trim();
 				if (config.removeScripts) {
-					html = html.replace(/\<script.+\<\/script>/, '');
+					html = html
+						.replace(/\<script.*\<\/script>/g, '')
+						.replace(/\<link.*(href\=).*(\.js).*\>/g, '');
 				}
 				writeFileSync(outputFile, html);
 			}
